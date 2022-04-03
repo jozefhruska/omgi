@@ -1,0 +1,33 @@
+{
+  "name": "omgi",
+  "version": "0.1.0",
+  "description": "Simple URL builder for OMGI",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jozefhruska/omgi.git"
+  },
+  "author": "Jozef Hruška",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jozefhruska/omgi/issues"
+  },
+  "homepage": "https://github.com/jozefhruska/omgi#readme",
+  "devDependencies": {
+    "husky": "~7.0.4",
+    "lint-staged": "~12.3.7",
+    "prettier": "~2.6.2",
+    "rollup": "~2.70.1",
+    "rollup-plugin-dts": "~4.2.0",
+    "rollup-plugin-esbuild": "~4.8.2",
+    "tsc": "~2.0.4",
+    "typescript": "~4.6.3"
+  }
+}
