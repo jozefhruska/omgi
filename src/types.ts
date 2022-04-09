@@ -1,16 +1,26 @@
-export type Template = "basic" | "article";
+export type Template = 'basic' | 'article';
 
-export type CommonTemplateProps = {
+export type CommonTemplateValues = {
   heading: string;
   description: string;
 };
 
-export type BasicTemplateProps = {
+export type BasicTemplateValues = {
   badge: string;
-} & CommonTemplateProps;
+} & CommonTemplateValues;
 
-export type ArticleTemplateProps = {
+export type ArticleTemplateValues = {
   authorName: string;
   authorAvatarUrl: string;
   meta: string;
-} & CommonTemplateProps;
+} & CommonTemplateValues;
+
+export type GenerateFunctionProps =
+  | {
+      template: Extract<Template, 'basic'>;
+      values: BasicTemplateValues;
+    }
+  | {
+      template: Extract<Template, 'article'>;
+      values: ArticleTemplateValues;
+    };
