@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage --coverageReporters='text-summary'",
-    "lint:ts": "eslint . --ext ts",
-    "lint:ts:fix": "eslint . --ext ts --fix",
+    "lint": "eslint . --ext ts",
+    "lint:fix": "eslint . --ext ts --fix",
     "prepare": "husky install"
   },
   "repository": {
