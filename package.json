@@ -24,7 +24,15 @@
   "bugs": {
     "url": "https://github.com/jozefhruska/omgi/issues"
   },
-  "homepage": "https://github.com/jozefhruska/omgi#readme",
+  "homepage": "https://omgi.vercel.app",
+  "keywords": [
+    "OMGI",
+    "Open Graph protocol",
+    "Open Graph image",
+    "OG image",
+    "generator",
+    "custom"
+  ],
   "devDependencies": {
     "@types/jest": "~27.4.1",
     "@typescript-eslint/eslint-plugin": "~5.18.0",
