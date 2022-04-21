@@ -42,5 +42,28 @@ describe('Main', () => {
         'https://omgi.vercel.app/api/generate/article?heading=Brush+a+dozen+oz+of+watermelon+in+one+container+of+honey.&description=Try+heating+watermelon+paste+tossed+with+gold+tequila.&authorName=Albus+Dumbledore&authorAvatarUrl=https%3A%2F%2Fomgi.vercel.app%2Fimage.png&meta=Try+heating+chili+tossed+with+worcestershire+sauce%2C+covered+with+lime.'
       );
     });
+
+    it('Removes nullish values', () => {
+      const values: ArticleTemplateValues = {
+        heading:
+          'Brush a dozen oz of watermelon in one container of honey.',
+        description:
+          'Try heating watermelon paste tossed with gold tequila.',
+        authorName: 'Albus Dumbledore',
+        authorAvatarUrl: 'https://omgi.vercel.app/image.png',
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        meta: undefined,
+      };
+
+      expect(
+        getTemplateUrl({
+          template: 'article',
+          values,
+        })
+      ).toEqual(
+        'https://omgi.vercel.app/api/generate/article?heading=Brush+a+dozen+oz+of+watermelon+in+one+container+of+honey.&description=Try+heating+watermelon+paste+tossed+with+gold+tequila.&authorName=Albus+Dumbledore&authorAvatarUrl=https%3A%2F%2Fomgi.vercel.app%2Fimage.png'
+      );
+    });
   });
 });
